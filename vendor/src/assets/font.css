@@ -1,0 +1,148 @@
+
+@font-face {
+    font-family: regularFont;
+    src: url("./font/Inconsolata-Regular.ttf");
+}
+@font-face {
+  font-family: MontserratFont;
+  src: url("./font/Montserrat-VariableFont_wght.ttf");
+}
+/* LEXEND */
+@font-face {
+    font-family: LexendFont;
+    src: url("./font/Lexend-VariableFont_wght.ttf");
+  }
+@font-face {
+  font-family: LexendThin;
+  src: url("./font/Lexend-Thin.ttf");
+}
+@font-face {
+  font-family: LexendBold;
+  src: url("./font/Lexend-Bold.ttf");
+}
+@font-face {
+  font-family: LexendBlack;
+  src: url("./font/Lexend-Black.ttf");
+}
+@font-face {
+  font-family: LexendExtraLight;
+  src: url("./font/Lexend-ExtraLight.ttf");
+}
+@font-face {
+  font-family: LexendLight;
+  src: url("./font/Lexend-Light.ttf");
+}
+@font-face {
+  font-family: LexendExtraBold;
+  src: url("./font/Lexend-ExtraBold.ttf");
+}
+@font-face {
+  font-family: LexendMedium;
+  src: url("./font/Lexend-Medium.ttf");
+}
+@font-face {
+  font-family: LexendRegular;
+  src: url("./font/Lexend-Regular.ttf");
+} 
+/* ROBOTO */
+
+/* @font-face {
+  font-family: RobotoThin;
+  src: url("./font/Roboto-Thin.ttf");
+} */
+@font-face {
+  font-family: RobotoBold;
+  src: url("./font/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: RobotoBlack;
+  src: url("./font/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url("./font/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: RobotoMedium;
+  src: url("./font/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url("./font/Roboto-Regular.ttf");
+} 
+
+
+@font-face {
+    font-family: poppinslight;
+    src: url("./font/poppinslight.ttf");
+}
+
+@font-face {
+    font-family: poppinsregular;
+    src: url("./font/poppinsregular.ttf");
+}
+
+@font-face {
+    font-family: poppinsmedium;
+    src: url("./font/poppinsmedium.ttf");
+}
+
+@font-face {
+    font-family: poppinssemibold;
+    src: url("./font/poppinssemibold.ttf");
+}
+
+@font-face {
+    font-family: poppinsbold;
+    src: url("./font/poppinsbold.ttf");
+}
+
+
+
+
+
+@font-face {
+    font-family: opensanslight;
+    src: url("./font/opensanslight.ttf");
+}
+
+@font-face {
+    font-family: opensansregular;
+    src: url("./font/opensansregular.ttf");
+}
+@font-face {
+    font-family: dmsansregular;
+    src: url("./font/opensansregular.ttf");
+}
+@font-face {
+    font-family: fontexpired;
+    src: url("./font/opensansregular.ttf");
+}
+
+@font-face {
+    font-family: fontd;
+    src: url("./font/opensansregular.ttf");
+}
+@font-face {
+    font-family: opensanssemibold;
+    src: url("./font/opensanssemibold.ttf");
+}
+
+@font-face {
+    font-family: opensansbold;
+    src: url("./font/opensansbold.ttf");
+}
+
+@font-face {
+    font-family: opensansextrabold;
+    src: url("./font/opensansextrabold.ttf");
+}
+@font-face {
+  font-family: playfairRegular;
+  src: url("./font/Playfair-Display-Regular.ttf");
+}
+@font-face {
+  font-family: playfair;
+  src: url("./font/PlayfairDisplay-VariableFont_wght.ttf");
+}

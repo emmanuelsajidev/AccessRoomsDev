@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Your CSS styles here */
+        /* ... */
+        .shop-now-button {
+            position: absolute;
+            top: 3%;
+            left: 3%;
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 2% 3%;
+            /* Adjust padding as needed */
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1;
+            /* Adjust font size for responsiveness */
+            cursor: pointer;
+        }
+
+        .shop-now-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Styling for the Eco Store heading */
+        h2.eco-store-heading {
+            color: #2e8540;
+            /* Leaf green color */
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive styling for icons */
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .icon-container div {
+            text-align: center;
+            width: 30%;
+            /* Adjust percentage width for responsiveness */
+        }
+
+        .icon-container img {
+            max-width: 100%;
+            width: 70%;
+            /* Adjust percentage width for responsiveness */
+            height: auto;
+        }
+
+        .icon-container p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f5f5f5; margin: 0; padding: 0; font-family: 'Arial', sans-serif;">
+
+    <!-- Banner Image and Header -->
+    <div class="container"
+        style="width: 100%; max-width: 635px; margin: 0 auto; background-color: #ffffff; position: relative;">
+        <a href="https://accessrooms.com/">
+            <img src="https://media.istockphoto.com/id/472909442/photo/backwaters-of-kerala.jpg?s=612x612&w=0&k=20&c=ibwRiZJZGcxG5MLWFUowcXM9XK3nZnklk9ZH1Qus3C4="
+                alt="Access rooms" style="max-width: 100%; display: block;">
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container"
+        style="width: 100%; max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 20px;">
+
+        <h2 class="eco-store-heading">Booking alert</h2>
+
+        <!-- Greeting and Order Details -->
+        <p style="font-size: 16px; color: #333; line-height: 1.6;">
+            Dear Admin, <br><br>
+            We're thrilled to inform you that your shikara named ( {shikaraName} ) has been successfully booked.. Below
+            are the
+            details of the booking:
+        </p>
+
+        <!-- Order Details Table -->
+        <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Shikara Name:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{shikaraName}</td>
+            </tr>
+
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Customer name:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{name}</td>
+            </tr>
+
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Booking Number:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{bookingNo}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Booked Date:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{selectedDate}</td>
+            </tr>
+
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Location</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{location}</td>
+            </tr>
+
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Starting point:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{pickUpLocation}</td>
+            </tr>
+
+            <!-- 
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Ending point:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{dropLocation}</td>
+            </tr> -->
+
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Total Shikara Amount(Rs):</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{bookingTotal}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Balance Amount(Rs):</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{balanceAmount}</td>
+            </tr>
+            <!-- <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px; border: 1px solid #ddd;">CheckInTime:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{CheckInTime}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">CheckOutTime:</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">{CheckOutTime}</td>
+            </tr> -->
+        </table>
+
+        <!-- Additional Message -->
+        <p style="font-size: 16px; color: #333; line-height: 1.6; margin-top: 20px;">
+            We're excited to provide our services to you. Should you have any questions or need further
+            assistance, feel free to reach out to our Customer Care at <br><strong>+91 7994111694,+91
+                9539920001</strong>. Thank you for
+            booking!
+        </p>
+
+        <!-- Site Link and Customer Care -->
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="font-size: 16px; color: #333; line-height: 1.6;">
+                Visit our <a href="https://accessrooms.com/" style="color: #32b127; text-decoration: none;">website</a>
+                to explore more shikaras and houseboats!
+            </p>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <h3 style="color: #333;">Our Specialties</h3>
+            <p style="font-size: 16px; color: #333; line-height: 1.6;">Discover our secure, fast, and safe booking
+                experience!</p>
+
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://api.accessrooms.com/invoice/shikara/agent?id={id}" target="_blank"
+                    style="text-decoration: none; display: inline-block;">
+                    <img src="https://play-lh.googleusercontent.com/1EgLFchHT9oQb3KME8rzIab7LrOIBfC14DSfcK_Uzo4vuK-WYFs9dhI-1kDI7J0ZNTDr=w480-h960-rw"
+                        alt="Download Ticket" style="max-width: 30%; height: 30%;" />
+                    <button
+                        style="background-color: #4CAF50; color: #ffffff; padding: 2% 3%; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%;">
+                        Download Your Ticket
+                    </button>
+                </a>
+            </div>
+            <!-- Icons for Specialties -->
+            <!-- <div class="icon-container">
+                <div>
+                    <img src="https://mudumalaitigereserve.s3.ap-south-1.amazonaws.com/1700301911793eQy1pB-0o.jpg"
+                        alt="Secure Icon">
+                    <p>Secure</p>
+                </div>
+                <div>
+                    <img src="https://mudumalaitigereserve.s3.ap-south-1.amazonaws.com/17003016334670ttOSCfmFZ.jpg"
+                        alt="Fast Icon">
+                    <p>Fast</p>
+                </div>
+                <div>
+                    <img src="https://mudumalaitigereserve.s3.ap-south-1.amazonaws.com/1700301633496jyOSNJM0rq.jpg"
+                        alt="Safe Icon">
+                    <p>Top Quality</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
