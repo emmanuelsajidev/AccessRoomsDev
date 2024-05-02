@@ -350,7 +350,7 @@
                       width="330px"
                       style="border-radius: 10px"
                     >
-                      <v-img
+                      <!-- <v-img
                         v-if="item.shikaraId"
                         height="150px"
                         :src="mediaUURL + item.shikaraId.coverImage"
@@ -358,9 +358,25 @@
                         <template v-slot:placeholder>
                           <ImageLoader />
                         </template>
-                      </v-img>
+                      </v-img> -->
+                      <div v-viewer style="display: flex; min-height: 200px">
+                        <img
+                          v-if="item.shikaraId"
+                        style="
+                        width: 100%;
+                        height: 150px;
+                        object-fit: cover;
+                        cursor: pointer;
+                      "
+                          :src="mediaUURL + item.shikaraId.coverImage"
+                        />
+                          <!-- <template v-slot:placeholder>
+                            <ImageLoader /> </template
+                        > -->
+                      </div>
+
                       <v-img
-                        v-else
+                        v-if="!item.shikaraId"
                         height="150px"
                         src="./../assets/images/nophoto.jpg"
                       ></v-img>

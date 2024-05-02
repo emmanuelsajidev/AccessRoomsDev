@@ -14,6 +14,9 @@ import VueCountryCode from "vue-country-code";
 import ConfirmDialog from '@/components/ConfirmDialog.vue';
 import VueGtag from "vue-gtag";
 import VueSocialSharing from 'vue-social-sharing'
+import 'viewerjs/dist/viewer.css'
+import VueViewer from 'v-viewer'
+Vue.use(VueViewer)
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 

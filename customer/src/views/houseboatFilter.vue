@@ -399,12 +399,7 @@
               pa-md-6
               style="background-color: transparent"
             >
-              <v-card
-                class="pa-4"
-                elevation="1"
-                style="border-radius: 10px"
-                @click="navigateToHouseboatDetail(item)"
-              >
+              <v-card class="pa-4" elevation="1" style="border-radius: 10px">
                 <!-- @click="$router.push('/HouseboatDetail?id=' + item._id)" -->
 
                 <v-layout wrap>
@@ -414,15 +409,24 @@
                       width="330px"
                       style="border-radius: 10px"
                     >
+                      <div v-viewer style="display: flex; min-height: 200px">
+                        <img
+                          v-if="item.fullImage"
+                        style="
+                        width: 100%;
+                        height: 150px;
+                        object-fit: cover;
+                        cursor: pointer;
+                      "
+                          :src="mediaUURL + item.fullImage"
+                        />
+                          <!-- <template v-slot:placeholder>
+                            <ImageLoader /> </template
+                        > -->
+                      </div>
+
                       <v-img
-                        v-if="item.fullImage"
-                        height="150px"
-                        :src="mediaUURL + item.fullImage"
-                      >
-                        <template v-slot:placeholder> <ImageLoader /> </template
-                      ></v-img>
-                      <v-img
-                        v-else
+                        v-if="!item.fullImage"
                         height="150px"
                         src="./../assets/images/nophoto.jpg"
                       ></v-img>
@@ -481,6 +485,7 @@
                       small
                       style="border-radius: 10px"
                       color="rgba(255, 98, 0, 1)"
+                      @click="navigateToHouseboatDetail(item)"
                     >
                       <span
                         style="
@@ -805,6 +810,8 @@ export default {
       housedata: [],
       filterType: false,
       Datalength: 0,
+      viewerVisible: false, // Variable to control the visibility of the viewer
+      viewerImages: [], // Array to store images to be displayed in the viewer
     };
   },
   watch: {
@@ -993,7 +1000,7 @@ export default {
           this.ServerError = true;
         });
     },
-        navigateToHouseboatDetail(item) {
+    navigateToHouseboatDetail(item) {
       const id = item._id;
       const category = this.category;
       const type = this.type;
@@ -1001,7 +1008,7 @@ export default {
       const room = this.room;
       const triptype = this.triptype;
       const checkInDate = this.checkInDate;
-      const checkOutDate =this.checkOutDate;
+      const checkOutDate = this.checkOutDate;
       const children = this.children;
       const adult = this.adult;
       const houseboatname = item.houseBoatName;
