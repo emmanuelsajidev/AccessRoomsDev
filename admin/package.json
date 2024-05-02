@@ -1,0 +1,64 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "set NODE_OPTIONS=--openssl-legacy-provider &&  vue-cli-service lint"
+  },
+  "dependencies": {
+    "@bachdgvn/vue-otp-input": "^1.0.8",
+    "@mdi/js": "^7.2.96",
+    "apexcharts": "^3.41.1",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "moment": "^2.29.4",
+    "v-viewer": "^1.6.4",
+    "vue": "^2.6.11",
+    "vue-advanced-cropper": "^1.11.5",
+    "vue-apexcharts": "^1.6.2",
+    "vue-cal": "^4.8.1",
+    "vue-cropperjs": "^5.0.0",
+    "vue-element-loading": "^2.0.2",
+    "vue-owl-carousel": "^2.0.3",
+    "vue-owl-carousel2": "^2.0.7",
+    "vue-router": "^3.5.2",
+    "vue-slick": "^1.2.0",
+    "vue2-editor": "^2.10.3",
+    "vuetify": "^2.4.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
