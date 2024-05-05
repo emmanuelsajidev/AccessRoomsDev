@@ -412,15 +412,15 @@
                       <div v-viewer style="display: flex; min-height: 200px">
                         <img
                           v-if="item.fullImage"
-                        style="
-                        width: 100%;
-                        height: 150px;
-                        object-fit: cover;
-                        cursor: pointer;
-                      "
+                          style="
+                            width: 100%;
+                            height: 150px;
+                            object-fit: cover;
+                            cursor: pointer;
+                          "
                           :src="mediaUURL + item.fullImage"
                         />
-                          <!-- <template v-slot:placeholder>
+                        <!-- <template v-slot:placeholder>
                             <ImageLoader /> </template
                         > -->
                       </div>
@@ -1000,7 +1000,50 @@ export default {
           this.ServerError = true;
         });
     },
+    navigateToPage2(item) {
+      const category = localStorage.getItem("Hcategory");
+      const type = localStorage.getItem("Htype");
+      const location = localStorage.getItem("Hlocation");
+      const room = localStorage.getItem("Hroom");
+      const triptype = localStorage.getItem("Htriptype");
+      const checkInDate = localStorage.getItem("HcheckInDate");
+      const checkOutDate = localStorage.getItem("HcheckOutDate");
+      const children = localStorage.getItem("Hchildren");
+      const adult = localStorage.getItem("Hadult");
+
+      this.$router.push({
+        path: "/HouseboatDetailMultiple",
+        query: {
+          ids: item._id,
+          category,
+          type,
+          location,
+          room,
+          triptype,
+          checkInDate,
+          checkOutDate,
+          children,
+          adult,
+        },
+      });
+    },
     navigateToHouseboatDetail(item) {
+      localStorage.setItem("Hcategory", this.category);
+      localStorage.setItem("Htype", this.type);
+      localStorage.setItem("Hlocation", this.location);
+      localStorage.setItem("Hroom", this.room);
+      localStorage.setItem("Htriptype", this.triptype);
+      localStorage.setItem("HcheckInDate", this.checkInDate);
+      localStorage.setItem("HcheckOutDate", this.checkOutDate);
+      if (this.children > 0) {
+        localStorage.setItem("Hchildren", this.children);
+      } else {
+        localStorage.setItem("Hchildren", 0);
+      }
+      // localStorage.setItem("Hchildren",this.children);
+      localStorage.setItem("Hadult", this.adult);
+      var curTab = localStorage.getItem("myTab");
+      localStorage.setItem("curTab", curTab);
       const id = item._id;
       const category = this.category;
       const type = this.type;
@@ -1012,7 +1055,6 @@ export default {
       const children = this.children;
       const adult = this.adult;
       const houseboatname = item.houseBoatName;
-
       const url = `/HouseBoat?houseboatname=${houseboatname}&id=${id}&category=${category}&type=${type}&triptype=${triptype}&room=${room}&checkInDate=${checkInDate}&location=${location}&checkOutDate=${checkOutDate}&children=${children}&adult=${adult}`;
 
       this.$router.push(url);

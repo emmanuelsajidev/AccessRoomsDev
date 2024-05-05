@@ -783,6 +783,19 @@ export default {
         });
     },
       navigateToShikaraDetail(item) {
+         localStorage.setItem("checkInDate", this.checkInDate);
+      localStorage.setItem("checkInTime", this.checkInTime);
+      localStorage.setItem("checkOutTime", this.checkOutTime);
+      localStorage.setItem("location", this.location);
+      if (this.children > 0) {
+        localStorage.setItem("children", this.children);
+      } else {
+        localStorage.setItem("children", 0);
+      }
+      localStorage.setItem("adult", this.adult);
+
+      var curTab = localStorage.getItem("myTab");
+      localStorage.setItem("curTab", curTab);
         const id = item.shikaraId._id;
         const children = this.children;
         const checkInDate =  this.checkInDate;
