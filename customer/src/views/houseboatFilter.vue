@@ -257,7 +257,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <!-- <v-flex xs11 py-2>
+      <v-flex xs11 py-2>
         <v-layout wrap justify-center>
           <v-flex xs12 sm4 lg2>
             <v-btn block color="rgba(255, 98, 0, 1)">
@@ -269,13 +269,13 @@
                   font-family: LexendRegular;
                   text-transform: none;
                 "
-                @click="validation()"
+                @click="validationGet()"
                 >Search
               </span>
             </v-btn>
           </v-flex>
         </v-layout>
-      </v-flex> -->
+      </v-flex>
     </v-layout>
     <v-dialog width="550px" v-model="guest">
       <v-card class="pa-2">
@@ -835,6 +835,43 @@ export default {
       } else {
         this.msg = "Please choose number of adults";
         this.showSnackbar = true;
+      }
+    },
+    validationGet() {
+      if (!this.category) {
+        this.msg = "Please choose category";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.type) {
+        this.msg = "Please choose houseboat type";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.location) {
+        this.msg = "Please choose location";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.room) {
+        this.msg = "Please enter number of rooms";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.adult) {
+        this.msg = "Please choose number of guests";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.triptype) {
+        this.msg = "Please choose trip type";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.checkInDate) {
+        this.msg = "Please choose check-in date";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.checkOutDate) {
+        this.msg = "Please choose check out date";
+        this.showSnackbar = true;
+        return;
+      } else {
+        this.getHouseboat();
       }
     },
     validation() {

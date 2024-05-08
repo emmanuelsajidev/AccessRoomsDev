@@ -211,6 +211,25 @@
               class="font2a"
             ></v-select>
           </v-flex>
+            <v-flex xs11 py-2>
+              <v-layout wrap justify-center>
+                <v-flex xs12 sm4 lg2>
+                  <v-btn block color="rgba(255, 98, 0, 1)">
+                    <span
+                      style="
+                        font-weight: 500;
+                        color: white;
+                        font-size: 18px;
+                        font-family: LexendRegular;
+                        text-transform: none;
+                      "
+                      @click="validationGet()"
+                      >Search
+                    </span>
+                  </v-btn>
+                </v-flex>
+              </v-layout>
+            </v-flex>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -633,6 +652,31 @@ export default {
         this.showSnackbar = true;
       }
     },
+    validationGet(){
+       if (!this.location) {
+        this.msg = "Please choose location";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.adult) {
+        this.msg = "Please choose number of guests";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.checkInDate) {
+        this.msg = "Please choose check-in date";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.checkInTime) {
+        this.msg = "Please choose check-in time";
+        this.showSnackbar = true;
+        return;
+      } else if (!this.checkOutTime) {
+        this.msg = "Please choose check-out time";
+        this.showSnackbar = true;
+        return;
+      } else {
+        this.searchProduct();
+      }
+    },
     validation() {
       if (!this.location) {
         this.msg = "Please choose location";
@@ -655,7 +699,7 @@ export default {
         this.showSnackbar = true;
         return;
       } else {
-        this.searchProduct();
+        this.getShikara();
       }
     },
     searchProduct() {
