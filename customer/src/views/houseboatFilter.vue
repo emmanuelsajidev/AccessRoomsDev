@@ -366,7 +366,7 @@
     </v-dialog>
     <v-layout wrap justify-center>
       <v-flex xs12 sm11 md12 lg10 pb-4>
-        <v-card outlined color="white" class="py-8" v-if="housedata">
+        <v-card outlined color="white" v-if="housedata">
           <v-layout wrap justify-center>
             <v-flex xs12 sm11>
               <span
@@ -396,7 +396,7 @@
               :key="i"
               pa-1
               pa-sm-2
-              pa-md-6
+              pa-md-3
               style="background-color: transparent"
             >
               <v-card class="pa-4" elevation="1" style="border-radius: 10px">
@@ -436,7 +436,7 @@
                     xs12
                     text-left
                     px-2
-                    pt-2
+                    pt-0
                     style="
                       font-family: LexendFont;
                       font-weight: 500;

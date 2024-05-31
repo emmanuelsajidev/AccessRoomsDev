@@ -27,9 +27,9 @@
         src="./../assets/images/bg.png" width="100%"  :height="$vuetify.breakpoint.name == 'xs' 
                   ? '2600px' 
                   :$vuetify.breakpoint.name == 'sm'
-                  ? '1500px'
+                  ? '1700px'
                   : $vuetify.breakpoint.name == 'md'
-                  ? '1000px'
+                  ? '1500px'
                   : $vuetify.breakpoint.name == 'lg'
                   ? '1200px': '1200px'"
       >
