@@ -211,7 +211,7 @@
               class="font2a"
             ></v-select>
           </v-flex>
-            <v-flex xs11 py-2>
+            <v-flex xs11 py-2 pb-16>
               <v-layout wrap justify-center>
                 <v-flex xs12 sm4 lg2>
                   <v-btn block color="rgba(255, 98, 0, 1)">
@@ -618,7 +618,7 @@ export default {
   mounted() {
     this.getData();
     this.checkInTime = this.getAvailableTimes(this.checkInDate)[0];
-    this.checkOutTime = this.getAvailableTimes(this.checkInDate)[0];
+    this.checkOutTime = this.getAvailableTimes(this.checkInDate)[4];
   },
   methods: {
     clearCheckOutTime() {

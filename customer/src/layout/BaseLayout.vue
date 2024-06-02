@@ -374,7 +374,7 @@
                                       text-transform: none;
                                     "
                                     @click="validation()"
-                                    >Search</span
+                                    >Search </span
                                   >
                                 </v-btn>
                               </v-flex>
